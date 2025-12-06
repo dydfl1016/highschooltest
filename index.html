@@ -29,6 +29,12 @@
             white-space: pre-wrap;
             font-style: italic;
         }
+        /* 밑줄 스타일 */
+        .passage u {
+            text-decoration: underline;
+            text-decoration-color: #00bcd4;
+            font-weight: bold;
+        }
         .quiz-card {
             border: 1px solid #ccc;
             padding: 20px;
@@ -110,19 +116,23 @@
     
     <h2>📝 영어 지문 원문</h2>
     <div id="passage" class="passage">
-        One of the most important aspects of sustaining long-term
-relationships is communication. It’s easy to connect with someone
-and then let the relationship get stuck due to a lack of follow-up.
-To keep the connection alive, make a conscious effort to stay
-in touch. This doesn’t mean constantly reaching out with requests
-or updates but rather maintaining a friendly and consistent line
-of communication. A simple message to check in or share
-something of value can go a long way in reinforcing your
+One of the most important aspects of sustaining long-term
+relationships is communication. [ ① ] It’s easy to connect with someone
+and then let the relationship get <u>stuck</u> due to a lack of follow-up.
+[ ② ] To keep the connection alive, make a <u>conscious</u> effort to stay
+in touch. 
+This doesn’t mean <u>constantly</u> reaching out with requests
+or updates but rather maintaining a friendly and <u>consistent</u> line
+of communication. 
+<span style="display:inline-block;">[ ③ ]</span> A simple message to check in or share
+something of value can go a long way in <u>reinforcing</u> your
 relationship. For example, if you come across an article or
-resource that you think might interest a connection, share it
-with them, even if you haven’t spoken in a while. This shows
+resource that you think might interest a connection, share <u>it</u>
+with them, even if you haven’t spoken in a while. 
+<span style="display:inline-block;">[ ④ ]</span> This shows
 that you’re thinking of them and are invested in maintaining
 the relationship.
+<span style="display:inline-block;">[ ⑤ ]</span>
     </div>
 
     <h2 style="color: #455a64;">💡 문제 풀이 (총 13문항)</h2>
@@ -154,33 +164,33 @@ the relationship.
             ],
             explanation: "글의 핵심은 장기적인 관계 유지를 위해 의식적인 노력(conscious effort)을 통해 친밀하고 일관된 소통(consistent line of communication)을 유지해야 한다는 것입니다."
         },
-        // 2. 문법/어법 (재구성된 문제 기준)
+        // 2. 문법/어법 (get -> getting 오답 유도 가정)
         {
-            id: 2, type: "문법/어법", title: "다음 밑줄 친 부분 중, 어법상 틀린 것은?", answer: 3,
+            id: 2, type: "문법/어법", title: "다음 밑줄 친 부분 중, 어법상 틀린 것은? (let the relationship getting stuck으로 가정)", answer: 2,
             options: [
-                "sustaining (O)",
-                "get (O)",
-                "check (X, to check or share가 맞으나 내신 변형 시 to checking으로 오답 유도 가능)",
-                "reaching (O)",
-                "maintaining (O)"
+                "sustaining",
+                "getting (get으로 바뀌어야 함)",
+                "reaching",
+                "maintaining",
+                "reinforcing"
             ],
-            explanation: "A simple message to check in or share...에서 check는 to에 연결된 동사원형으로 적절합니다. (다만, 내신에서는 병렬 구조를 묻기 위해 to check를 to checking으로 변형하여 출제하는 경우가 많습니다. 원문은 check가 맞습니다.)"
+            explanation: "let은 사역동사이므로 목적격 보어는 동사원형(get)이 와야 합니다. getting은 틀린 형태입니다."
         },
-        // 3. 어휘 문제
+        // 3. 어휘 문제 (stuck -> free로 오답 유도 가정)
         {
-            id: 3, type: "어휘", title: "다음 밑줄 친 단어 중 문맥상 낱말의 쓰임이 적절하지 않은 것은? (가정: stuck을 free로 변형)", answer: 1,
+            id: 3, type: "어휘", title: "다음 밑줄 친 단어 중 문맥상 낱말의 쓰임이 적절하지 않은 것은? (stuck, conscious, constantly, consistent, reinforcing 중 하나를 어색하게 가정)", answer: 1,
             options: [
-                "stuck (원문에서 free로 가정 시 부적절)",
+                "stuck (원문에서 free로 가정 시 문맥상 어색)",
                 "conscious",
                 "constantly",
                 "consistent",
                 "reinforcing"
             ],
-            explanation: "관계는 후속 조치 부족으로 '정체되어야(get stuck)' 문맥상 적절합니다. 만약 원문에 free가 있었다면 문맥상 어색합니다. (본 문제에서는 원문 stuck을 free로 가정하고 풀이합니다.)"
+            explanation: "관계는 후속 조치 부족으로 '정체되어야(get stuck)' 문맥상 적절합니다. 만약 원문에 free가 있었다면 문맥상 어색합니다."
         },
         // 4. 빈칸 추론
         {
-            id: 4, type: "빈칸 추론", title: "빈칸에 들어갈 말로 가장 적절한 것은?", answer: 2,
+            id: 4, type: "빈칸 추론", title: "This doesn’t mean ... but rather $\text{\underline{\hspace{30mm}}}$ of communication.", answer: 2,
             options: [
                 "establishing a temporary and informal method",
                 "maintaining a friendly and consistent line",
@@ -192,7 +202,7 @@ the relationship.
         },
         // 5. 빈칸 추론
         {
-            id: 5, type: "빈칸 추론", title: "빈칸에 들어갈 말로 가장 적절한 것은?", answer: 5,
+            id: 5, type: "빈칸 추론", title: "A simple message ... can go a long way in $\text{\underline{\hspace{30mm}}}$ your relationship.", answer: 5,
             options: [
                 "restoring the initial formality of",
                 "reducing the emotional burden in",
@@ -209,20 +219,20 @@ the relationship.
                 "(A)-(C)-(B)",
                 "(B)-(A)-(C)",
                 "(B)-(C)-(A)",
-                "(C)-(A)-(B) (원문 흐름 C-A-B)",
+                "(C)-(A)-(B)",
                 "(A)-(B)-(C)"
             ],
-            explanation: "원문 흐름은 '노력 필요성 (C) → 구체적인 예시 (A) → 예시의 의미 (B)' 순서로, C-A-B가 가장 자연스럽습니다. (문제에 제시된 5번 선택지는 A-B-C로 오답 처리)"
+            explanation: "원문 흐름은 '노력 필요성 (C) → 구체적인 예시 (A) → 예시의 의미 (B)' 순서로, C-A-B가 가장 자연스럽습니다."
         },
         // 7. 문장 삽입
         {
-            id: 7, type: "문장 삽입", title: "글의 흐름상, 주어진 문장이 들어가기에 가장 적절한 곳은?", answer: 3,
+            id: 7, type: "문장 삽입", title: "주어진 문장이 들어가기에 가장 적절한 곳은? [This doesn’t mean constantly reaching out...]", answer: 3,
             options: ["①", "②", "③", "④", "⑤"],
-            explanation: "주어진 문장의 This는 바로 앞 문장(③ 앞)의 '의식적인 노력(conscious effort)'을 지칭하며, 그 노력의 구체적인 성격(not requests but consistent line)을 설명하므로 ③이 가장 적절합니다."
+            explanation: "주어진 문장의 This는 바로 앞 문장(③ 앞)의 '의식적인 노력(conscious effort)'을 지칭하며, 그 노력의 구체적인 성격(not requests but consistent line)을 설명하므로 ③이 가장 적절합니다. (지문 내 [ ③ ] 위치에 해당)"
         },
         // 8. 지시어/대명사
         {
-            id: 8, type: "지시어/대명사", title: "밑줄 친 it이 가리키는 것으로 가장 적절한 것은?", answer: 4,
+            id: 8, type: "지시어/대명사", title: "밑줄 친 <u>it</u>이 가리키는 것으로 가장 적절한 것은?", answer: 4,
             options: [
                 "a connection",
                 "a conscious effort",
@@ -230,7 +240,7 @@ the relationship.
                 "an article or resource",
                 "your relationship"
             ],
-            explanation: "it은 share의 대상인 'an article or resource'를 대신하고 있습니다."
+            explanation: "<u>it</u>은 share의 대상인 'an article or resource'를 대신하고 있습니다."
         },
         // 9. 내용 일치 (일치)
         {
@@ -256,21 +266,21 @@ the relationship.
             ],
             explanation: "'constantly reaching out with requests or updates'는 피해야 할 것이라고 명시되어 있습니다."
         },
-        // 11. 문법/어법 (get -> getting 오답 유도 가정)
+        // 11. 문법/어법 (원문 그대로)
         {
-            id: 11, type: "문법/어법", title: "다음 밑줄 친 부분 중, 어법상 틀린 것은? (let the relationship getting stuck으로 가정)", answer: 2,
+            id: 11, type: "문법/어법", title: "다음 밑줄 친 부분 중, 어법상 틀린 것은? (원문은 모두 적절하나, 내신형 오답 유도를 가정)", answer: 3,
             options: [
-                "sustaining",
-                "getting (get으로 바뀌어야 함)",
-                "reaching",
-                "maintaining",
-                "reinforcing"
+                "sustaining (O)",
+                "get (O)",
+                "check (X, to checking으로 오답 유도 가정)",
+                "reaching (O)",
+                "maintaining (O)"
             ],
-            explanation: "let은 사역동사이므로 목적격 보어는 동사원형(get)이 와야 합니다. getting은 틀린 형태입니다."
+            explanation: "A simple message to check in or share...에서 check는 to에 연결된 동사원형으로 적절합니다. (check를 틀린 것으로 가정하고 3번을 답으로 설정)"
         },
         // 12. 내신형 문법 (reach -> reaching, maintain -> maintaining 오답 유도 가정)
         {
-            id: 12, type: "내신형 문법", title: "다음 문장의 밑줄 친 부분을 어법상 바르게 고친 것은?", answer: 4,
+            id: 12, type: "내신형 문법", title: "다음 문장의 밑줄 친 부분을 어법상 바르게 고친 것은? (not reach but maintain으로 가정)", answer: 4,
             options: [
                 "reach → to reach / maintain → to maintain",
                 "reach → reaching / maintain → maintain",
@@ -282,7 +292,7 @@ the relationship.
         },
         // 13. 어휘 (영영 풀이)
         {
-            id: 13, type: "어휘", title: "밑줄 친 invested의 영영 풀이로 가장 적절한 것은?", answer: 4,
+            id: 13, type: "어휘", title: "밑줄 친 <u>invested</u>의 영영 풀이로 가장 적절한 것은?", answer: 4,
             options: [
                 "Provided with the necessary resources for a task.",
                 "Supplied with money to make a profit.",
